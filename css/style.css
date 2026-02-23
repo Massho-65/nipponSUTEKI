@@ -946,3 +946,66 @@ footer {
 .breadcrumb span {
   margin: 0 6px;
 }
+/* =========================
+   Pagination
+   ========================= */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.pagination a,
+.pagination .disabled {
+  min-width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+.pagination a {
+  color: #333;
+  background: #fff;
+}
+
+.pagination a:hover {
+  background: #f0f0f0;
+}
+
+.pagination a.current {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.pagination .disabled {
+  color: #aaa;
+  border-color: #eee;
+}
+/* =========================
+   Sticky Pagination (Mobile Only)
+   ========================= */
+
+@media (max-width: 768px) {
+  .pagination-top {
+    position: sticky;
+    top: 0;
+    background: #fdfbf7; /* あなたの背景色 */
+    padding: 10px 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+  }
+}
+.pagination {
+  margin: 40px 0;
+}
