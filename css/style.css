@@ -1009,3 +1009,131 @@ footer {
 .pagination {
   margin: 40px 0;
 }
+/* =========================
+   LP – Choose View Buttons
+   ========================= */
+
+.cat-guide {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cat-guide:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+/* Kiri 強調 */
+.cat-guide:nth-of-type(1) {
+  border-left: 5px solid var(--kiri);
+}
+
+/* Sari 強調 */
+.cat-guide:nth-of-type(2) {
+  border-left: 5px solid var(--sari);
+}
+
+/* CTA inside Kiri */
+.cat-guide:nth-of-type(1) .cta {
+  background: var(--kiri);
+}
+
+.cat-guide:nth-of-type(1) .cta:hover {
+  background: #3f5f7f;
+}
+
+/* CTA inside Sari */
+.cat-guide:nth-of-type(2) .cta {
+  background: var(--sari);
+}
+
+.cat-guide:nth-of-type(2) .cta:hover {
+  background: #a35f6f;
+}
+
+
+/* =========================
+   Hero LP polish
+   ========================= */
+
+.hero h2 {
+  font-size: 2.8rem;
+  margin-top: 40px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 20px auto 60px;
+  color: #555;
+}
+
+
+/* =========================
+   LP spacing balance
+   ========================= */
+
+.gallery-title {
+  margin-top: 120px;
+}
+
+.about {
+  margin-top: 140px;
+}
+/* =========================
+   Footer Archive Link
+   ========================= */
+
+.site-footer {
+  margin-top: 80px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.archive-link {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #777;
+  transition: opacity 0.3s ease;
+}
+
+.archive-link:hover {
+  opacity: 0.6;
+}
+/* =========================
+   Footer - Wa Modern Minimal
+   ========================= */
+
+.site-footer {
+  margin-top: 120px;
+  padding: 60px 20px 40px;
+  text-align: center;
+  position: relative;
+}
+
+/* 細く静かな横線 */
+.site-footer::before {
+  content: "";
+  display: block;
+  width: 48px;              /* 短めが和モダン */
+  height: 1px;
+  background: rgba(0,0,0,0.15); /* 強すぎない線 */
+  margin: 0 auto 28px;
+}
+
+/* リンク */
+.archive-link {
+  font-size: 0.8rem;        /* 少し小さめ */
+  letter-spacing: 2.5px;    /* 静かな余白感 */
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(0,0,0,0.55);  /* グレー寄り */
+  transition: opacity 0.4s ease, letter-spacing 0.4s ease;
+}
+
+.archive-link:hover {
+  opacity: 0.6;
+  letter-spacing: 3px;      /* ほんの少し広がる */
+}
