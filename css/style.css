@@ -122,13 +122,18 @@ nav a:hover {
     left: auto;
     transform: none;
     display: block;
-    margin: 10px auto 0;
-    width: fit-content;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 10px 15px;
     text-align: center;
+    white-space: normal;
+    word-break: break-word;
     order: 2;
   }
   .hero-container img {
     order: 1;
+    width: 100%;
   }
 }
 
