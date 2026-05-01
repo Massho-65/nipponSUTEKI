@@ -111,18 +111,24 @@ nav a:hover {
 
 /* スマホではラベルを画像の下に移動 */
 @media (max-width: 600px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .hero-label {
-    position: static;
+    position: relative;
+    top: auto;
+    left: auto;
     transform: none;
     display: block;
     margin: 10px auto 0;
     width: fit-content;
     text-align: center;
+    order: 2;
   }
-  .hero-container a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .hero-container img {
+    order: 1;
   }
 }
 
