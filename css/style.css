@@ -176,6 +176,28 @@ nav a:hover {
   background: #333;
 }
 
+/* Payhip variant — outlined */
+.cta--payhip {
+  background: transparent;
+  color: var(--green);
+  border: 1.5px solid var(--green);
+  padding: 13px 43px; /* borderぶん微調整 */
+}
+
+.cta--payhip:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+/* cta-group wrapper */
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin: 20px 0 10px;
+}
+
 .hero-note {
   font-size: .8rem;
   color: #777;
@@ -1068,20 +1090,20 @@ footer {
 }
 
 /* CTA inside Kiri */
-.cat-guide--kiri .cta {
+.cat-guide--kiri .cta:not(.cta--payhip) {
   background: var(--kiri);
 }
 
-.cat-guide--kiri .cta:hover {
+.cat-guide--kiri .cta:not(.cta--payhip):hover {
   background: #3f5f7f;
 }
 
 /* CTA inside Sari */
-.cat-guide--sari .cta {
+.cat-guide--sari .cta:not(.cta--payhip) {
   background: var(--sari);
 }
 
-.cat-guide--sari .cta:hover {
+.cat-guide--sari .cta:not(.cta--payhip):hover {
   background: #a35f6f;
 }
 
@@ -1171,3 +1193,73 @@ footer {
   opacity: 0.6;
   letter-spacing: 3px;      /* ほんの少し広がる */
 }
+/* =========================
+   Post Footer (blog posts)
+   ========================= */
+
+.post-footer {
+  text-align: center;
+  padding: 60px 20px 40px;
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+  color: #666;
+  font-size: .85rem;
+}
+
+.post-footer__lead {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  letter-spacing: .08em;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.post-footer__shops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.post-footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.post-footer__copy {
+  font-size: .75rem;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Social icons */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* SNS ブランドカラー（ホバー時） */
+.social-icon--instagram:hover { color: #e1306c; }
+.social-icon--pinterest:hover  { color: #e60023; }
+.social-icon--youtube:hover    { color: #ff0000; }
+.social-icon--tiktok:hover     { color: #010101; }
+.social-icon--facebook:hover   { color: #1877f2; }
+.social-icon--x:hover          { color: #000000; }
