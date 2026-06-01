@@ -1263,3 +1263,87 @@ footer {
 .social-icon--tiktok:hover     { color: #010101; }
 .social-icon--facebook:hover   { color: #1877f2; }
 .social-icon--x:hover          { color: #000000; }
+
+/* =========================
+   Post Images — Responsive
+   (横スライド防止・全デバイス対応)
+   ========================= */
+
+/* 全imgの安全ネット */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* hero image */
+.hero img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ブログ記事内 figure / post-image */
+.post-image {
+  margin: 50px 0;
+  overflow: hidden;
+}
+
+.post-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0,0,0,.07);
+}
+
+.post-image figcaption {
+  margin-top: 12px;
+  font-size: .85rem;
+  color: #888;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 8px;
+}
+
+/* gallery カード画像 — 固定高さをautoに上書き */
+.card img,
+.post-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* キャラクターアイコン */
+.character-icon {
+  max-width: 90px;
+  width: 90px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* cat guide アイコン */
+.cat-icon img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* スマホ追加調整 */
+@media (max-width: 600px) {
+  .post-image {
+    margin: 32px 0;
+  }
+  .hero h2 {
+    font-size: 1.85rem;
+  }
+  /* blog-post 本文の横padding確保 */
+  .blog-post {
+    padding: 0 16px;
+  }
+  .blog-post article {
+    overflow-x: hidden;
+  }
+}
